@@ -8,8 +8,8 @@ exports.addCard = (req, res) => {
     title: reqBody.title,
     content: reqBody.content,
   });
-  card.save((err) => {
-    err ? res.send("error") : res.json(card);
+  card.save((err, savedCard) => {
+    return err ? res.send(err) : res.json(savedCard);
   });
 };
 

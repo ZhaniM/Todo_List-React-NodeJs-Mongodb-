@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./db/db");
-const cardController = require("./controller/cardControler");
+const db = require("./backend/db/db");
+const cardController = require("./backend/controller/cardControler");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
